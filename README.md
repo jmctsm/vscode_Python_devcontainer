@@ -6,3 +6,8 @@ Tools installed
 - flake8
 - mypy
 - black
+- bandit
+- pylint
+- autopep8
+- yapf
+
