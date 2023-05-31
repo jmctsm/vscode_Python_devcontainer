@@ -8,10 +8,8 @@ RUN groupadd --gid 1000 devops \
     && chmod 0440 /etc/sudoers.d/devops 
 
 USER devops
-RUN mkdir /home/devops/docker_ansible_stig/
-WORKDIR /home/devops/docker_ansible_stig/
-ENV VIRTUALENV=/home/devops/docker_ansible_stig/venv
-ENV ANSIBLE_CONFIG=/workspaces/docker_ansible_stig/playbooks/ansible.cfg
+WORKDIR /home/devops/
+ENV VIRTUALENV=/home/devops/venv
 RUN python3 -m venv $VIRTUALENV
 ENV PATH="$VIRTUALENV/bin:$PATH"
 RUN python -m pip install --upgrade pip && python -m pip install black flake8 mypy pytest isort
