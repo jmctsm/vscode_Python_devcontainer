@@ -1,0 +1,1 @@
+This is my starter container for building Python applications in VSCode
