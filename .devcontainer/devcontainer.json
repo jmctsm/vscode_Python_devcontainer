@@ -1,5 +1,5 @@
 {
-    "name": "Rocky_Ansible",
+    "name": "PythonDev",
     "build": {
         "dockerfile": "Dockerfile"
     },

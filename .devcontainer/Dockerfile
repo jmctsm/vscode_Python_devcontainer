@@ -14,5 +14,5 @@ ENV VIRTUALENV=/home/devops/docker_ansible_stig/venv
 ENV ANSIBLE_CONFIG=/workspaces/docker_ansible_stig/playbooks/ansible.cfg
 RUN python3 -m venv $VIRTUALENV
 ENV PATH="$VIRTUALENV/bin:$PATH"
-RUN python -m pip install --upgrade pip 
+RUN python -m pip install --upgrade pip && python -m pip install black flake8 mypy pytest isort
 
