@@ -12,5 +12,5 @@ WORKDIR /home/devops/
 ENV VIRTUALENV=/home/devops/venv
 RUN python3 -m venv $VIRTUALENV
 ENV PATH="$VIRTUALENV/bin:$PATH"
-RUN python -m pip install --upgrade pip && python -m pip install black flake8 mypy pytest isort bandit pylint autopep8 yapf
-
+COPY requirements.txt /home/devops/requirements.txt
+RUN python -m pip install --upgrade pip && python -m pip install -r /home/devops/requirements.txt
