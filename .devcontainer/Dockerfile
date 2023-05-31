@@ -12,5 +12,5 @@ WORKDIR /home/devops/
 ENV VIRTUALENV=/home/devops/venv
 RUN python3 -m venv $VIRTUALENV
 ENV PATH="$VIRTUALENV/bin:$PATH"
-COPY requirements.txt /home/devops/requirements.txt
+COPY --chown=devops:devops --chmod=660 requirements.txt /home/devops/requirements.txt
 RUN python -m pip install --upgrade pip && python -m pip install -r /home/devops/requirements.txt
